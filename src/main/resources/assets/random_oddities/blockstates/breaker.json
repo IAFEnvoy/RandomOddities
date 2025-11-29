@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "random_oddities:block/breaker_vertical",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "random_oddities:block/breaker",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "random_oddities:block/breaker"
+    },
+    "facing=south": {
+      "model": "random_oddities:block/breaker",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "random_oddities:block/breaker_vertical"
+    },
+    "facing=west": {
+      "model": "random_oddities:block/breaker",
+      "y": 270
+    }
+  }
+}

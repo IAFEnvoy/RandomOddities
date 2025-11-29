@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "package": "com.iafenvoy.random.oddities.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BlockMixin",
+    "EnchantmentHelperMixin",
+    "ItemMixin",
+    "LivingEntityMixin",
+    "PlayerMixin",
+    "SmithingMenuMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  },
+  "client": [
+    "BlockEntityWithoutLevelRendererMixin",
+    "ElytraLayerMixin"
+  ]
+}

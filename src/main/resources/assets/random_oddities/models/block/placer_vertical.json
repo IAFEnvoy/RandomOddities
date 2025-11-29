@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/orientable_vertical",
+  "textures": {
+    "front": "random_oddities:block/placer_front",
+    "side": "minecraft:block/furnace_top"
+  }
+}

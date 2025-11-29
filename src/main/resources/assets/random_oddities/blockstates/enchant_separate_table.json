@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "random_oddities:block/enchant_separate_table",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "random_oddities:block/enchant_separate_table"
+    },
+    "facing=south": {
+      "model": "random_oddities:block/enchant_separate_table",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "random_oddities:block/enchant_separate_table",
+      "y": 270
+    }
+  }
+}

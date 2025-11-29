@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "C": {
+      "item": "minecraft:purpur_block"
+    },
+    "S": {
+      "item": "random_oddities:elytra_combine_smithing_template"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "id": "random_oddities:elytra_combine_smithing_template",
+    "count": 2
+  },
+  "show_notification": true
+}

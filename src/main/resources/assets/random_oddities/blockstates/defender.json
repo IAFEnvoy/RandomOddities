@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "random_oddities:block/defender_vertical",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "random_oddities:block/defender",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "random_oddities:block/defender"
+    },
+    "facing=south": {
+      "model": "random_oddities:block/defender",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "random_oddities:block/defender_vertical"
+    },
+    "facing=west": {
+      "model": "random_oddities:block/defender",
+      "y": 270
+    }
+  }
+}
