@@ -11,6 +11,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
@@ -18,6 +19,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 public class PlasticChairBlockEntity extends BlockEntity {
     public static final int MAX_CHAIRS = 8;
@@ -48,12 +50,15 @@ public class PlasticChairBlockEntity extends BlockEntity {
         return true;
     }
 
-    public DyeColor removeChair() {
+    public Optional<DyeColor> removeChair() {
+        if (this.colors.isEmpty()) {
+            if (this.level != null) this.level.destroyBlock(this.worldPosition, false);
+            return Optional.empty();
+        }
         DyeColor color = this.colors.removeLast();
-        if (this.colors.isEmpty() && this.level != null)
-            this.level.destroyBlock(this.worldPosition, false);
-        else this.setChanged();
-        return color;
+        if (this.level != null && this.colors.isEmpty()) this.level.destroyBlock(this.worldPosition, false);
+        this.setChanged();
+        return Optional.of(color);
     }
 
     public List<DyeColor> getColors() {
@@ -68,7 +73,7 @@ public class PlasticChairBlockEntity extends BlockEntity {
     public void setChanged() {
         super.setChanged();
         if (this.level != null)
-            this.level.sendBlockUpdated(this.worldPosition, this.getBlockState(), this.getBlockState(), 0);
+            this.level.sendBlockUpdated(this.worldPosition, this.getBlockState(), this.getBlockState(), Block.UPDATE_ALL);
     }
 
     @Override

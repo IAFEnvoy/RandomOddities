@@ -14,6 +14,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -37,6 +38,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Optional;
 
 public class PlasticChairBlock extends BaseEntityBlock {
     private static final MapCodec<PlasticChairBlock> CODEC = simpleCodec(x -> new PlasticChairBlock());
@@ -95,8 +97,11 @@ public class PlasticChairBlock extends BaseEntityBlock {
         if (!state.getValue(OCCUPIED) && level.getBlockEntity(target) instanceof PlasticChairBlockEntity plasticChair) {
             if (player.isShiftKeyDown()) {
                 if (Math.random() < 0.5) {
-                    player.getInventory().placeItemBackInInventory(PlasticChairItem.create(plasticChair.removeChair()));
-                    level.playLocalSound(target, this.soundType.getBreakSound(), SoundSource.BLOCKS, 1, 0, true);
+                    Optional<DyeColor> color = plasticChair.removeChair();
+                    if (color.isPresent()) {
+                        player.getInventory().placeItemBackInInventory(PlasticChairItem.create(color.get()));
+                        level.playLocalSound(target, this.soundType.getBreakSound(), SoundSource.BLOCKS, 1, 0, true);
+                    }
                 } else
                     level.playLocalSound(target, this.soundType.getHitSound(), SoundSource.BLOCKS, 1, 0, true);
             } else {
