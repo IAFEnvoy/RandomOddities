@@ -1,8 +1,8 @@
 package com.iafenvoy.random.oddities.screen.handler;
 
-import com.iafenvoy.random.oddities.screen.slot.InputPredicateSlot;
 import com.iafenvoy.random.oddities.registry.ROBlocks;
 import com.iafenvoy.random.oddities.registry.ROScreenHandlers;
+import com.iafenvoy.random.oddities.screen.slot.InputPredicateSlot;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import net.minecraft.core.Holder;
 import net.minecraft.world.Container;

@@ -18,6 +18,7 @@ public final class RandomOddities {
         ConfigManager.getInstance().registerConfigHandler(ROCommonConfig.INSTANCE);
         ServerConfigManager.registerServerConfig(ROCommonConfig.INSTANCE, ServerConfigManager.PermissionChecker.IS_OPERATOR);
 
+        ROAttachmentTypes.REGISTRY.register(bus);
         ROBlockEntities.REGISTRY.register(bus);
         ROBlocks.REGISTRY.register(bus);
         RODataComponents.REGISTRY.register(bus);

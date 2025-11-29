@@ -1,10 +1,11 @@
 package com.iafenvoy.random.oddities.screen.slot;
 
-import java.util.function.Predicate;
 import net.minecraft.world.Container;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.function.Predicate;
 
 public class InputPredicateSlot extends Slot {
     private final Predicate<ItemStack> insertPredicate;

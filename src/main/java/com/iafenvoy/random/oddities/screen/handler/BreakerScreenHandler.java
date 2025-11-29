@@ -1,9 +1,9 @@
 package com.iafenvoy.random.oddities.screen.handler;
 
-import com.iafenvoy.random.oddities.screen.slot.InputPredicateSlot;
-import com.iafenvoy.random.oddities.screen.slot.TakeOnlySlot;
 import com.iafenvoy.random.oddities.registry.ROBlocks;
 import com.iafenvoy.random.oddities.registry.ROScreenHandlers;
+import com.iafenvoy.random.oddities.screen.slot.InputPredicateSlot;
+import com.iafenvoy.random.oddities.screen.slot.TakeOnlySlot;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
