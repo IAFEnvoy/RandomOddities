@@ -1,25 +1,29 @@
+# Random Oddities
 
-Installation information
-=======
+This mod contains my unclassified ideas and will keep updating.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+**If you have any good ideas you can submit on GitHub.**
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+## Contents
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+<div align=center><img src="https://raw.githubusercontent.com/IAFEnvoy/RandomOddities/refs/heads/master/img/1.webp" style="width:400px;text-align:center;" alt=""></img></div>
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+### Tools & Redstones
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+- Auto Crafter & Item Deleter: Crafting and deleting items in inventory.
+- Elytra Combine Smithing Template: Combine elytra with any chestplates.
+- Placer & Breaker: Place and break blocks.
+- Enchant Separate Table: Separate last enchantment from item.
+
+### Animals
+
+- Baby Capsule: Set animal to baby.
+- Stop Growing Capsule & Growing Capsule: Let animals stop growing or resume growing.
+
+### Decoration
+
+- Plastic chair: A stackable and dyeable chair. (Do not put on head)
+
+## Discord
+
+https://discord.gg/NDzz2upqAk
