@@ -1,6 +1,6 @@
 package com.iafenvoy.random.oddities.screen.handler;
 
-import com.iafenvoy.random.oddities.item.AutoCraftingItem;
+import com.iafenvoy.random.oddities.item.AutoCrafterItem;
 import com.iafenvoy.random.oddities.registry.ROItems;
 import com.iafenvoy.random.oddities.registry.ROScreenHandlers;
 import com.iafenvoy.random.oddities.screen.slot.DisplayOnlySlot;
@@ -31,10 +31,10 @@ public class AutoCraftingScreenHandler extends AbstractContainerMenu {
     }
 
     public AutoCraftingScreenHandler(int syncId, Inventory playerInventory, ContainerLevelAccess context) {
-        super(ROScreenHandlers.AUTO_CRAFTING.get(), syncId);
+        super(ROScreenHandlers.AUTO_CRAFTER.get(), syncId);
         this.playerInventory = playerInventory;
         this.context = context;
-        Pair<NonNullList<ItemStack>, NonNullList<ItemStack>> inventories = AutoCraftingItem.getStacks(playerInventory.getSelected());
+        Pair<NonNullList<ItemStack>, NonNullList<ItemStack>> inventories = AutoCrafterItem.getStacks(playerInventory.getSelected());
         this.input1 = this.createInventory(inventories.getFirst());
         this.input2 = this.createInventory(inventories.getSecond());
         this.result1 = new ResultContainer();
@@ -98,13 +98,13 @@ public class AutoCraftingScreenHandler extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
-        return player.getMainHandItem().is(ROItems.AUTO_CRAFTING.get());
+        return player.getMainHandItem().is(ROItems.AUTO_CRAFTER.get());
     }
 
     @Override
     public void removed(@NotNull Player player) {
         super.removed(player);
-        AutoCraftingItem.setStacks(this.playerInventory.getSelected(), new Pair<>(toDefaultedList(this.input1), toDefaultedList(this.input2)));
+        AutoCrafterItem.setStacks(this.playerInventory.getSelected(), new Pair<>(toDefaultedList(this.input1), toDefaultedList(this.input2)));
     }
 
     private static NonNullList<ItemStack> toDefaultedList(CraftingContainer inventory) {

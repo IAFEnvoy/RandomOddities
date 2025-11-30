@@ -10,7 +10,7 @@ import net.minecraft.world.entity.player.Inventory;
 import org.jetbrains.annotations.NotNull;
 
 public class AutoCraftingScreen extends AbstractContainerScreen<AutoCraftingScreenHandler> {
-    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(RandomOddities.MOD_ID, "textures/gui/auto_crafting.png");
+    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(RandomOddities.MOD_ID, "textures/gui/auto_crafter.png");
 
     public AutoCraftingScreen(AutoCraftingScreenHandler handler, Inventory inventory, Component title) {
         super(handler, inventory, title);

@@ -2,6 +2,7 @@
   "parent": "minecraft:block/orientable_vertical",
   "textures": {
     "front": "random_oddities:block/defender_front",
-    "side": "minecraft:block/furnace_top"
+    "side": "minecraft:block/furnace_top",
+    "particle": "minecraft:block/stone"
   }
 }

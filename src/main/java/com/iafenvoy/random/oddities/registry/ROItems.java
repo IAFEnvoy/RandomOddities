@@ -12,8 +12,8 @@ import java.util.function.Supplier;
 public final class ROItems {
     public static final DeferredRegister.Items REGISTRY = DeferredRegister.createItems(RandomOddities.MOD_ID);
 
+    public static final DeferredItem<Item> AUTO_CRAFTER = register("auto_crafter", AutoCrafterItem::new);
     public static final DeferredItem<Item> ITEMS_DELETER = register("items_deleter", ItemsDeleterItem::new);
-    public static final DeferredItem<Item> AUTO_CRAFTING = register("auto_crafting", AutoCraftingItem::new);
     public static final DeferredItem<Item> ELYTRA_COMBINE_SMITHING_TEMPLATE = register("elytra_combine_smithing_template", () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> CAPSULE = register("capsule", () -> new Item(new Item.Properties()));

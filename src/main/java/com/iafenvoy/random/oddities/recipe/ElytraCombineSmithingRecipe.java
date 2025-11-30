@@ -39,7 +39,7 @@ public class ElytraCombineSmithingRecipe implements SmithingRecipe {
     }
 
     @Override
-    public @NotNull ItemStack assemble(SmithingRecipeInput inventory, HolderLookup.@NotNull Provider registries) {
+    public @NotNull ItemStack assemble(SmithingRecipeInput inventory, @NotNull HolderLookup.Provider registries) {
         ItemStack itemStack = inventory.getItem(1).copyWithCount(1);
         if (this.isTemplateIngredient(inventory.getItem(0)) && this.isBaseIngredient(itemStack))
             return ElytraCombineHelper.combine(itemStack, inventory.getItem(2).copy());
@@ -47,7 +47,7 @@ public class ElytraCombineSmithingRecipe implements SmithingRecipe {
     }
 
     @Override
-    public @NotNull ItemStack getResultItem(HolderLookup.@NotNull Provider registryManager) {
+    public @NotNull ItemStack getResultItem(@NotNull HolderLookup.Provider registryManager) {
         return ElytraCombineHelper.combine(new ItemStack(Items.IRON_CHESTPLATE), new ItemStack(Items.ELYTRA));
     }
 

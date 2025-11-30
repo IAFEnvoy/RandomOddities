@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "random_oddities:item/auto_crafting"
+    "layer0": "random_oddities:item/auto_crafter"
   }
 }

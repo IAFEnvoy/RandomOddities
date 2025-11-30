@@ -20,7 +20,7 @@ public final class ROScreenHandlers {
 
     public static final DeferredHolder<MenuType<?>, MenuType<ItemsDeleterScreenHandler>> ITEMS_DELETER = register("items_deleter", () -> new MenuType<>(ItemsDeleterScreenHandler::new, FeatureFlagSet.of(FeatureFlags.VANILLA)));
     public static final DeferredHolder<MenuType<?>, MenuType<EnchantSeparateTableScreenHandler>> ENCHANT_SEPARATE_TABLE = register("enchant_separate_table", () -> new MenuType<>(EnchantSeparateTableScreenHandler::new, FeatureFlagSet.of(FeatureFlags.VANILLA)));
-    public static final DeferredHolder<MenuType<?>, MenuType<AutoCraftingScreenHandler>> AUTO_CRAFTING = register("auto_crafting", () -> new MenuType<>(AutoCraftingScreenHandler::new, FeatureFlagSet.of(FeatureFlags.VANILLA)));
+    public static final DeferredHolder<MenuType<?>, MenuType<AutoCraftingScreenHandler>> AUTO_CRAFTER = register("auto_crafter", () -> new MenuType<>(AutoCraftingScreenHandler::new, FeatureFlagSet.of(FeatureFlags.VANILLA)));
     public static final DeferredHolder<MenuType<?>, MenuType<BreakerScreenHandler>> BREAKER = register("breaker", () -> new MenuType<>(BreakerScreenHandler::new, FeatureFlagSet.of(FeatureFlags.VANILLA)));
 
     public static <T extends AbstractContainerMenu> DeferredHolder<MenuType<?>, MenuType<T>> register(String id, Supplier<MenuType<T>> supplier) {

@@ -28,8 +28,8 @@ public class ROCommonConfig extends AutoInitConfigContainer {
     }
 
     public static class ItemsConfig extends AutoInitConfigCategoryBase {
+        public final IConfigEntry<Boolean> autoCrafter = new BooleanEntry("config.%s.enable_auto_crafter".formatted(RandomOddities.MOD_ID), true).json("enable_auto_crafter");
         public final IConfigEntry<Boolean> itemsDeleter = new BooleanEntry("config.%s.enable_items_deleter".formatted(RandomOddities.MOD_ID), true).json("enable_items_deleter");
-        public final IConfigEntry<Boolean> autoCrafting = new BooleanEntry("config.%s.enable_auto_crafting".formatted(RandomOddities.MOD_ID), true).json("enable_auto_crafting");
 
         public ItemsConfig() {
             super("items", "config.category.%s.items".formatted(RandomOddities.MOD_ID));

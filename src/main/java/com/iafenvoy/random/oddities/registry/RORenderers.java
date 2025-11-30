@@ -31,7 +31,7 @@ public final class RORenderers {
     public static void registerScreenFactories(RegisterMenuScreensEvent event) {
         event.register(ROScreenHandlers.ITEMS_DELETER.get(), ItemsDeleterScreen::new);
         event.register(ROScreenHandlers.ENCHANT_SEPARATE_TABLE.get(), EnchantSeparateTableScreen::new);
-        event.register(ROScreenHandlers.AUTO_CRAFTING.get(), AutoCraftingScreen::new);
+        event.register(ROScreenHandlers.AUTO_CRAFTER.get(), AutoCraftingScreen::new);
         event.register(ROScreenHandlers.BREAKER.get(), BreakerScreen::new);
     }
 

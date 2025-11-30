@@ -26,5 +26,6 @@ public final class RandomOddities {
         ROItemGroups.REGISTRY.register(bus);
         ROItems.REGISTRY.register(bus);
         ROScreenHandlers.REGISTRY.register(bus);
+        ROSerializers.REGISTRY.register(bus);
     }
 }

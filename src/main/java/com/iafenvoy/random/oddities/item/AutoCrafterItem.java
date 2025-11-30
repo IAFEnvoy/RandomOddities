@@ -31,15 +31,15 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Optional;
 
-public class AutoCraftingItem extends Item implements MenuProvider {
-    public AutoCraftingItem() {
-        super(new Properties().stacksTo(1).rarity(Rarity.EPIC).component(RODataComponents.AUTO_CRAFTING, new Pair<>(NonNullList.withSize(9, ItemStack.EMPTY), NonNullList.withSize(9, ItemStack.EMPTY))));
+public class AutoCrafterItem extends Item implements MenuProvider {
+    public AutoCrafterItem() {
+        super(new Properties().stacksTo(1).rarity(Rarity.EPIC).component(RODataComponents.AUTO_CRAFTER, new Pair<>(NonNullList.withSize(9, ItemStack.EMPTY), NonNullList.withSize(9, ItemStack.EMPTY))));
     }
 
     @Override
     public void inventoryTick(@NotNull ItemStack stack, @NotNull Level world, @NotNull Entity entity, int slot, boolean selected) {
         super.inventoryTick(stack, world, entity, slot, selected);
-        if (!ROCommonConfig.INSTANCE.items.autoCrafting.getValue()) return;
+        if (!ROCommonConfig.INSTANCE.items.autoCrafter.getValue()) return;
         if (!world.isClientSide && entity instanceof Player player) {
             Inventory inventory = player.getInventory();
             Pair<NonNullList<ItemStack>, NonNullList<ItemStack>> inventories = getStacks(stack);
@@ -69,7 +69,7 @@ public class AutoCraftingItem extends Item implements MenuProvider {
 
     @Override
     public @NotNull Component getDisplayName() {
-        return Component.translatable("screen.%s.auto_crafting".formatted(RandomOddities.MOD_ID));
+        return Component.translatable("screen.%s.auto_crafter".formatted(RandomOddities.MOD_ID));
     }
 
     @Override
@@ -78,10 +78,10 @@ public class AutoCraftingItem extends Item implements MenuProvider {
     }
 
     public static Pair<NonNullList<ItemStack>, NonNullList<ItemStack>> getStacks(ItemStack stack) {
-        return stack.getOrDefault(RODataComponents.AUTO_CRAFTING, new Pair<>(NonNullList.withSize(9, ItemStack.EMPTY), NonNullList.withSize(9, ItemStack.EMPTY)));
+        return stack.getOrDefault(RODataComponents.AUTO_CRAFTER, new Pair<>(NonNullList.withSize(9, ItemStack.EMPTY), NonNullList.withSize(9, ItemStack.EMPTY)));
     }
 
     public static void setStacks(ItemStack stack, Pair<NonNullList<ItemStack>, NonNullList<ItemStack>> stacks) {
-        stack.set(RODataComponents.AUTO_CRAFTING, stacks);
+        stack.set(RODataComponents.AUTO_CRAFTER, stacks);
     }
 }

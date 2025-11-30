@@ -11,7 +11,7 @@ This mod contains my unclassified ideas and will keep updating.
 ### Tools & Redstones
 
 - Auto Crafter & Item Deleter: Crafting and deleting items in inventory.
-- Elytra Combine Smithing Template: Combine elytra with any chestplates.
+- Elytra Combine Smithing Template: Combine elytra with any chestplates. (Found in end cities.)
 - Placer & Breaker: Place and break blocks.
 - Enchant Separate Table: Separate last enchantment from item.
 

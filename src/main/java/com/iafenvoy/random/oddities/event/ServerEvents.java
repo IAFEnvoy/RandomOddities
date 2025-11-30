@@ -16,6 +16,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
@@ -57,6 +58,7 @@ public final class ServerEvents {
 
     @SubscribeEvent
     public static void addSmithingTemplate(LootTableLoadEvent event) {
-        event.getTable().addPool(new LootPool.Builder().add(LootItem.lootTableItem(ROItems.ELYTRA_COMBINE_SMITHING_TEMPLATE.get()).setQuality(1).setWeight(1)).when(LootItemRandomChanceCondition.randomChance(1.0f / 15)).build());
+        if (event.getKey().equals(BuiltInLootTables.END_CITY_TREASURE))
+            event.getTable().addPool(new LootPool.Builder().add(LootItem.lootTableItem(ROItems.ELYTRA_COMBINE_SMITHING_TEMPLATE.get()).setQuality(1).setWeight(1)).when(LootItemRandomChanceCondition.randomChance(1.0f / 15)).build());
     }
 }

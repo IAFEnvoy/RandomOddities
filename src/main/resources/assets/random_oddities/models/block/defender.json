@@ -3,6 +3,7 @@
   "textures": {
     "front": "random_oddities:block/defender_front",
     "side": "minecraft:block/furnace_side",
-    "top": "minecraft:block/furnace_top"
+    "top": "minecraft:block/furnace_top",
+    "particle": "minecraft:block/stone"
   }
 }
