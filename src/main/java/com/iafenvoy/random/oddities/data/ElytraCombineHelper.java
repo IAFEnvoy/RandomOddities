@@ -5,11 +5,11 @@ import net.minecraft.world.item.ItemStack;
 
 public final class ElytraCombineHelper {
     public static ItemStack combine(ItemStack target, ItemStack elytra) {
-        target.set(RODataComponents.ELYTRA, elytra);
+        target.set(RODataComponents.ELYTRA, new SingleStackComponent(elytra));
         return target;
     }
 
     public static ItemStack get(ItemStack target) {
-        return target.getOrDefault(RODataComponents.ELYTRA, ItemStack.EMPTY);
+        return target.getOrDefault(RODataComponents.ELYTRA, new SingleStackComponent(ItemStack.EMPTY)).stack();
     }
 }

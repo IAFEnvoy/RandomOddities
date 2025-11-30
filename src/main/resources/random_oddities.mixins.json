@@ -6,19 +6,18 @@
     "AgeableMobMixin",
     "BlockMixin",
     "EnchantmentHelperMixin",
+    "IItemStackExtensionMixin",
     "ItemMixin",
-    "LivingEntityMixin",
-    "PlayerMixin",
     "SmithingMenuMixin"
+  ],
+  "client": [
+    "BlockEntityWithoutLevelRendererMixin",
+    "ElytraLayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "overwrites": {
     "requireAnnotations": true
-  },
-  "client": [
-    "BlockEntityWithoutLevelRendererMixin",
-    "ElytraLayerMixin"
-  ]
+  }
 }

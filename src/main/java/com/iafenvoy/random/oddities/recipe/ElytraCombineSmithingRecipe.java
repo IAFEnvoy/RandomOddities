@@ -41,8 +41,8 @@ public class ElytraCombineSmithingRecipe implements SmithingRecipe {
     @Override
     public @NotNull ItemStack assemble(SmithingRecipeInput inventory, HolderLookup.@NotNull Provider registries) {
         ItemStack itemStack = inventory.getItem(1).copyWithCount(1);
-        if (this.isBaseIngredient(itemStack))
-            return ElytraCombineHelper.combine(itemStack, inventory.getItem(2));
+        if (this.isTemplateIngredient(inventory.getItem(0)) && this.isBaseIngredient(itemStack))
+            return ElytraCombineHelper.combine(itemStack, inventory.getItem(2).copy());
         return ItemStack.EMPTY;
     }
 
