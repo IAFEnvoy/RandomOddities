@@ -112,7 +112,7 @@ configurations {
 }
 
 dependencies {
-    implementation "maven.modrinth:jupiter:I4i9vhEW"
+    implementation "maven.modrinth:jupiter:bjogSV4z"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

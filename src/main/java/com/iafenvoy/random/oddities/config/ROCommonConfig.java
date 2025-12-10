@@ -2,7 +2,6 @@ package com.iafenvoy.random.oddities.config;
 
 import com.iafenvoy.jupiter.config.container.AutoInitConfigContainer;
 import com.iafenvoy.jupiter.config.entry.BooleanEntry;
-import com.iafenvoy.jupiter.interfaces.IConfigEntry;
 import com.iafenvoy.random.oddities.RandomOddities;
 import net.minecraft.resources.ResourceLocation;
 
@@ -18,9 +17,9 @@ public class ROCommonConfig extends AutoInitConfigContainer {
     }
 
     public static class BlocksConfig extends AutoInitConfigCategoryBase {
-        public final IConfigEntry<Boolean> enchantSeparateTable = new BooleanEntry("config.%s.enable_enchant_separate_table".formatted(RandomOddities.MOD_ID), true).json("enable_enchant_separate_table");
-        public final IConfigEntry<Boolean> breaker = new BooleanEntry("config.%s.enable_breaker".formatted(RandomOddities.MOD_ID), true).json("enable_breaker");
-        public final IConfigEntry<Boolean> placer = new BooleanEntry("config.%s.enable_placer".formatted(RandomOddities.MOD_ID), true).json("enable_placer");
+        public final BooleanEntry enchantSeparateTable = BooleanEntry.builder("config.%s.enable_enchant_separate_table".formatted(RandomOddities.MOD_ID), true).json("enable_enchant_separate_table").build();
+        public final BooleanEntry breaker = BooleanEntry.builder("config.%s.enable_breaker".formatted(RandomOddities.MOD_ID), true).json("enable_breaker").build();
+        public final BooleanEntry placer = BooleanEntry.builder("config.%s.enable_placer".formatted(RandomOddities.MOD_ID), true).json("enable_placer").build();
 
         public BlocksConfig() {
             super("blocks", "config.category.%s.blocks".formatted(RandomOddities.MOD_ID));
@@ -28,8 +27,8 @@ public class ROCommonConfig extends AutoInitConfigContainer {
     }
 
     public static class ItemsConfig extends AutoInitConfigCategoryBase {
-        public final IConfigEntry<Boolean> autoCrafter = new BooleanEntry("config.%s.enable_auto_crafter".formatted(RandomOddities.MOD_ID), true).json("enable_auto_crafter");
-        public final IConfigEntry<Boolean> itemsDeleter = new BooleanEntry("config.%s.enable_items_deleter".formatted(RandomOddities.MOD_ID), true).json("enable_items_deleter");
+        public final BooleanEntry autoCrafter = BooleanEntry.builder("config.%s.enable_auto_crafter".formatted(RandomOddities.MOD_ID), true).json("enable_auto_crafter").build();
+        public final BooleanEntry itemsDeleter = BooleanEntry.builder("config.%s.enable_items_deleter".formatted(RandomOddities.MOD_ID), true).json("enable_items_deleter").build();
 
         public ItemsConfig() {
             super("items", "config.category.%s.items".formatted(RandomOddities.MOD_ID));
@@ -37,8 +36,8 @@ public class ROCommonConfig extends AutoInitConfigContainer {
     }
 
     public static class EnchantmentsConfig extends AutoInitConfigCategoryBase {
-        public final IConfigEntry<Boolean> autoPlant = new BooleanEntry("config.%s.enable_auto_plant".formatted(RandomOddities.MOD_ID), true).json("enable_auto_plant");
-        public final IConfigEntry<Boolean> kindness = new BooleanEntry("config.%s.enable_kindness".formatted(RandomOddities.MOD_ID), true).json("enable_kindness");
+        public final BooleanEntry autoPlant = BooleanEntry.builder("config.%s.enable_auto_plant".formatted(RandomOddities.MOD_ID), true).json("enable_auto_plant").build();
+        public final BooleanEntry kindness = BooleanEntry.builder("config.%s.enable_kindness".formatted(RandomOddities.MOD_ID), true).json("enable_kindness").build();
 
         public EnchantmentsConfig() {
             super("enchantments", "config.category.%s.enchantments".formatted(RandomOddities.MOD_ID));
